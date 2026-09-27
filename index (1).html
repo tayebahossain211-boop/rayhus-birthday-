@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>For Rayhan — 28 September</title>
+<meta name="theme-color" content="#090611">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#08050d;color:#fff;font-family:'DM Sans',sans-serif}
+body{overflow-x:hidden}
+body:before{content:"";position:fixed;inset:-30%;background:
+radial-gradient(circle at 20% 20%,rgba(255,105,160,.17),transparent 28%),
+radial-gradient(circle at 80% 35%,rgba(160,110,255,.15),transparent 30%),
+radial-gradient(circle at 50% 85%,rgba(255,170,110,.10),transparent 28%);filter:blur(30px);animation:drift 12s ease-in-out infinite alternate;pointer-events:none}
+@keyframes drift{to{transform:translate3d(2%,-2%,0) scale(1.05)}}
+#stars{position:fixed;inset:0;pointer-events:none;opacity:.65}
+.star{position:absolute;width:2px;height:2px;background:#fff;border-radius:50%;animation:twinkle 2s infinite alternate}
+@keyframes twinkle{to{opacity:.15;transform:scale(.5)}}
+.screen{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px;position:relative}
+.card{width:min(760px,100%);border:1px solid rgba(255,255,255,.13);background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.025));backdrop-filter:blur(25px);border-radius:32px;box-shadow:0 30px 100px rgba(0,0,0,.55),inset 0 1px rgba(255,255,255,.12);padding:46px 32px;text-align:center}
+.eyebrow{letter-spacing:.32em;text-transform:uppercase;font-size:11px;color:#d9b9c9}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,11vw,92px);font-weight:500;line-height:.9;margin:18px 0 12px}
+.sub{color:#c9bdc8;line-height:1.7;max-width:560px;margin:0 auto}
+.lock{font-size:58px;margin:12px 0 8px;filter:drop-shadow(0 0 22px rgba(255,130,190,.3))}
+.count{display:flex;justify-content:center;gap:10px;margin:30px auto 18px;flex-wrap:wrap}
+.unit{min-width:92px;padding:16px 12px;border:1px solid rgba(255,255,255,.10);border-radius:18px;background:rgba(0,0,0,.18)}
+.num{font-size:30px;font-weight:600}
+.label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#9e92a0;margin-top:4px}
+.hidden{display:none!important}
+.password-box{margin:28px auto 0;max-width:430px}
+input{width:100%;padding:16px 18px;border-radius:15px;border:1px solid rgba(255,255,255,.16);background:rgba(0,0,0,.25);color:#fff;outline:none;text-align:center;font-size:16px}
+input:focus{border-color:rgba(255,160,205,.65);box-shadow:0 0 0 4px rgba(255,130,190,.08)}
+button{margin-top:12px;width:100%;padding:16px;border:0;border-radius:15px;background:linear-gradient(135deg,#f4b5cf,#caa8ff);color:#170b18;font-weight:700;cursor:pointer;font-size:15px}
+#error{height:20px;color:#ff9fbf;font-size:13px;margin-top:10px}
+.letter-wrap{padding:30px 0 70px}
+.letter{max-width:760px;margin:auto;padding:clamp(28px,6vw,62px);text-align:left;border:1px solid rgba(255,255,255,.12);border-radius:30px;background:rgba(255,255,255,.055);box-shadow:0 30px 100px rgba(0,0,0,.4)}
+.letter h2{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,8vw,68px);font-weight:500;text-align:center;margin:0 0 8px}
+.date{text-align:center;color:#d4a9bd;letter-spacing:.2em;text-transform:uppercase;font-size:10px;margin-bottom:35px}
+.letter p{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,3vw,25px);line-height:1.75;color:#eee4eb;margin:0 0 23px}
+.signature{text-align:right;font-family:'Cormorant Garamond',serif;font-size:30px;color:#f1c7d9;margin-top:40px}
+.quote{text-align:center;font-family:'Cormorant Garamond',serif;font-size:27px;line-height:1.45;color:#f6d6e3;margin:45px auto 10px;max-width:650px}
+.heart{display:inline-block;animation:beat 1.5s ease-in-out infinite}
+@keyframes beat{50%{transform:scale(1.18)}}
+.fade{animation:fade .9s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+footer{text-align:center;color:#756c77;font-size:11px;padding:28px}
+</style>
+</head>
+<body>
+<div id="stars"></div>
+
+<section id="locked" class="screen">
+  <div class="card fade">
+    <div class="eyebrow">A little surprise is waiting</div>
+    <div class="lock">🔐</div>
+    <h1>For Rayhan</h1>
+    <p class="sub">This little world is sealed until your birthday begins.<br>Some things are worth waiting for. ❤️</p>
+    <div class="count">
+      <div class="unit"><div id="d" class="num">00</div><div class="label">Days</div></div>
+      <div class="unit"><div id="h" class="num">00</div><div class="label">Hours</div></div>
+      <div class="unit"><div id="m" class="num">00</div><div class="label">Minutes</div></div>
+      <div class="unit"><div id="s" class="num">00</div><div class="label">Seconds</div></div>
+    </div>
+    <div class="eyebrow">Unlocks at 12:00 AM · 28 September</div>
+  </div>
+</section>
+
+<section id="password" class="screen hidden">
+  <div class="card fade">
+    <div class="lock">💌</div>
+    <div class="eyebrow">Midnight has arrived</div>
+    <h1>Your surprise</h1>
+    <p class="sub">One tiny password stands between you and a letter that has been waiting for you.</p>
+    <div class="password-box">
+      <input id="pass" type="password" placeholder="Enter the password" autocomplete="off">
+      <button onclick="unlock()">Open My Letter</button>
+      <div id="error"></div>
+    </div>
+  </div>
+</section>
+
+<section id="letterPage" class="letter-wrap hidden">
+  <article class="letter fade">
+    <h2>Happy Birthday, Rayhan</h2>
+    <div class="date">28 September · From Tayeba</div>
+
+    <p>My Love,</p>
+
+    <p>Happy Birthday. ❤️</p>
+
+    <p>I don't really know where to start, because whenever I try to put what you mean to me into words, it always feels like the words are too small.</p>
+
+    <p>Sometimes I just sit and think about us, and honestly… I still can't believe I got you.</p>
+
+    <p>I never thought someone would come into my life and love me the way you do. Someone who would care about the smallest things, notice my little changes, listen to my nonsense, tolerate my childishness, handle my mood swings, and still somehow make me feel loved even when I'm not being the easiest person to love.</p>
+
+    <p>But you do.</p>
+
+    <p>And maybe you don't realize how much that means to me.</p>
+
+    <p>You've seen so many different versions of me. The happy me, the emotional me, the annoying me, the childish me, the overthinking me, the quiet me… and instead of walking away, you stayed and tried to understand every single one.</p>
+
+    <p>That's something I'll never take for granted.</p>
+
+    <p>You became the person I look for when something good happens, and the person I want when something hurts.</p>
+
+    <p>You've been there in my good times and my bad times, and even when you couldn't fix what I was going through, just knowing that you were there somehow made everything feel a little easier.</p>
+
+    <p>And now it's your turn to go through a difficult chapter.</p>
+
+    <p>I know you're struggling right now. I know you're trying to figure things out, build yourself, work for your future, and become the person you want to be.</p>
+
+    <p>And I want you to know that I'm not going anywhere because of that.</p>
+
+    <p>So please, don't ever feel guilty for being busy.</p>
+
+    <p>Don't think that because you're focusing on your life, your dreams, or your struggles, you're giving me less love.</p>
+
+    <p><strong>Go. Focus on yourself. Build your future. Work hard. Chase everything you've ever wanted.</strong></p>
+
+    <p>I'll understand.</p>
+
+    <p>I'll wait.</p>
+
+    <p>I'll be here.</p>
+
+    <p>I don't need you to be available every minute to know that you love me. I don't need constant attention to feel secure about us.</p>
+
+    <p>Because I know you.</p>
+
+    <p>And I know your heart.</p>
+
+    <p>I want to be the person who supports you while you're building your life, not the person who makes your life harder when you're already struggling.</p>
+
+    <p>If someday you're too tired to talk, I'll understand.</p>
+
+    <p>If you're busy chasing your dreams, I'll be proud of you.</p>
+
+    <p>If life gets difficult and you don't know what to do, you can still come to me.</p>
+
+    <p>You don't have to be strong all the time with me.</p>
+
+    <p>You can be tired.</p>
+
+    <p>You can be lost.</p>
+
+    <p>You can have bad days.</p>
+
+    <p>You can tell me when you're not okay.</p>
+
+    <p>I'll still be here.</p>
+
+    <p>Because I don't just want the version of you who has everything figured out.</p>
+
+    <p><strong>I want you—all of you.</strong></p>
+
+    <p>The man who is still growing.</p>
+
+    <p>The man who is still struggling.</p>
+
+    <p>The man who is still chasing his dreams.</p>
+
+    <p>The man who sometimes doesn't know what comes next.</p>
+
+    <p>I want to see you become everything you've been working so hard to become.</p>
+
+    <p>And when you finally get there, I hope you look back and remember that there was always someone quietly standing beside you, believing in you even on the days when you couldn't believe in yourself.</p>
+
+    <p>That person will be me.</p>
+
+    <p>Maybe we're far away from each other right now. Maybe I can't be beside you at midnight, hug you, hold your hand, or watch your face when you make your birthday wish.</p>
+
+    <p>And honestly, that's the part I hate the most about being away from you.</p>
+
+    <p>Because if I could have one thing today, it wouldn't be a gift or anything expensive.</p>
+
+    <p>I'd just want to be there.</p>
+
+    <p>Beside you.</p>
+
+    <p>That's all.</p>
+
+    <p>I want the ordinary things with you someday.</p>
+
+    <p>I want to annoy you in person.</p>
+
+    <p>I want to make you deal with my mood swings face-to-face. 😭</p>
+
+    <p>I want to laugh with you over stupid things.</p>
+
+    <p>I want to sit beside you without needing a phone between us.</p>
+
+    <p>I want to celebrate your birthdays next to you instead of through a screen.</p>
+
+    <p>And I want all these little dreams to become our normal life someday.</p>
+
+    <p>Until then, please remember this:</p>
+
+    <p><strong>You have me.</strong></p>
+
+    <p>Through your good days.</p>
+
+    <p>Through your bad days.</p>
+
+    <p>Through your success.</p>
+
+    <p>Through your failures.</p>
+
+    <p>Through the days when everything feels perfect and the days when everything feels completely messed up.</p>
+
+    <p>I'm still your girl.</p>
+
+    <p>I'm still on your side.</p>
+
+    <p>And I'm still choosing you.</p>
+
+    <p>I feel so incredibly lucky that I found someone like you.</p>
+
+    <p>And if life gave me the chance to choose again, knowing everything I know now…</p>
+
+    <p><strong>I'd still choose you.</strong></p>
+
+    <p>Without hesitation.</p>
+
+    <p>Thank you for loving me.</p>
+
+    <p>Thank you for caring for me.</p>
+
+    <p>Thank you for putting up with all my little childish things.</p>
+
+    <p>Thank you for staying when I wasn't easy to understand.</p>
+
+    <p>Thank you for making me feel like I have someone in this world who is truly mine.</p>
+
+    <p>I hope this birthday is the beginning of a better chapter for you.</p>
+
+    <p>I hope the struggles you're facing now slowly turn into stories you'll someday tell with a smile.</p>
+
+    <p>I hope you achieve everything you're working for.</p>
+
+    <p>And when you do, I hope I'll still be right there beside you, annoying you, loving you, and reminding you that I'm proud of the man you've become.</p>
+
+    <p>So today, on your birthday, I don't just wish you happiness.</p>
+
+    <p><strong>I wish you strength for the days you're struggling, peace for the days your mind feels heavy, courage for the dreams you're chasing, and a future that gives you every reason to smile.</strong></p>
+
+    <p>And for us…</p>
+
+    <p>I wish for the day when distance is nothing more than an old memory.</p>
+
+    <p>Until that day comes, I'll keep waiting.</p>
+
+    <p>I'll keep believing.</p>
+
+    <p>I'll keep loving you.</p>
+
+    <p>And I'll keep standing beside you in every way I can.</p>
+
+    <p><strong>Not just for today.</strong><br>
+    <strong>Not just for the good days.</strong><br>
+    <strong>But for as long as life lets me.</strong></p>
+
+    <p>Happy Birthday, my husband. ❤️</p>
+
+    <p>You are one of the best things that ever happened to me.</p>
+
+    <p>And I hope you never forget that somewhere in this world, there is a girl who feels incredibly lucky just because she gets to call you hers.</p>
+
+    <p><strong>I love you.</strong><br>
+    <strong>More than I can explain.</strong><br>
+    <strong>More than this little letter could ever hold.</strong></p>
+
+    <div class="signature">Forever yours,<br><strong>Tayeba</strong> ❤️</div>
+  </article>
+  <footer>Made with a heart that refuses to believe distance is forever.</footer>
+</section>
+
+<script>
+const TARGET = new Date("2026-09-28T00:00:00+06:00").getTime();
+const PASSWORD_HASH = "bb038dc162215741c5baff06d7470c2d28c4d3e01405676f5cf1eddd67d03a81";
+
+function hash(text) {
+  const bytes = new TextEncoder().encode(text);
+  return crypto.subtle.digest("SHA-256", bytes).then(buf =>
+    [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2,"0")).join("")
+  );
+}
+
+function pad(n) { return String(n).padStart(2,"0"); }
+
+function update() {
+  const now = Date.now();
+  const diff = TARGET - now;
+  if (diff <= 0) {
+    clearInterval(timer);
+    document.getElementById("locked").classList.add("hidden");
+    document.getElementById("password").classList.remove("hidden");
+    return;
+  }
+  const total = Math.floor(diff/1000);
+  document.getElementById("d").textContent = pad(Math.floor(total/86400));
+  document.getElementById("h").textContent = pad(Math.floor(total%86400/3600));
+  document.getElementById("m").textContent = pad(Math.floor(total%3600/60));
+  document.getElementById("s").textContent = pad(total%60);
+}
+const timer = setInterval(update,1000);
+update();
+
+async function unlock() {
+  const value = document.getElementById("pass").value.trim();
+  const ok = await hash(value);
+  if (ok === PASSWORD_HASH) {
+    document.getElementById("password").classList.add("hidden");
+    document.getElementById("letterPage").classList.remove("hidden");
+    window.scrollTo({top:0,behavior:"smooth"});
+  } else {
+    document.getElementById("error").textContent = "Not quite… try the name of the girl who made this for you. 🤍";
+  }
+}
+document.getElementById("pass").addEventListener("keydown",e=>{if(e.key==="Enter")unlock()});
+
+// Decorative stars
+const stars = document.getElementById("stars");
+for(let i=0;i<90;i++){
+  const s=document.createElement("span");
+  s.className="star";
+  s.style.left=Math.random()*100+"%";
+  s.style.top=Math.random()*100+"%";
+  s.style.animationDelay=(Math.random()*3)+"s";
+  s.style.opacity=(.15+Math.random()*.7);
+  stars.appendChild(s);
+}
+</script>
+</body>
+</html>
